@@ -26,7 +26,7 @@ export default class Tasks extends Component {
         return(
             <View style={{flex:1}}>
                 <TaskHeader tasks={ tasks } />
-                <TasksList taks={ tasks }/>
+                <TasksList tasks={ tasks }/>
             </View>
         )
     }
