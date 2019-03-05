@@ -12,11 +12,21 @@ export default class Tasks extends Component {
             tasks: [
                 { id: 1, title: 'Sacar la basura', completed: true },
                 { id: 2, title: 'Paga colegiatura', completed: false },
-                { id: 3, title: 'Comprar cervezas', completed: true },
+                { id: 3, title: 'Comprar cervezas', completed: false },
                 { id: 4, title: 'Sacar al perro', completed: false },
                 { id: 5, title: 'Comprar croquetas', completed: false }
             ]
         }
+    }
+
+    updateTask(taskId) {
+        const {tasks = []} = this.state;
+        const tasksList = tasks.map( task => {
+            return task.id === taskId
+                        ? {...task, completed: !task.completed }
+                        : {...task}
+        });
+        this.setState({tasks: tasksList});
     }
 
     render(){
@@ -24,9 +34,9 @@ export default class Tasks extends Component {
         const { tasks = [] } = this.state;
 
         return(
-            <View style={{flex:1}}>
+            <View style={styles.container}>
                 <TaskHeader tasks={ tasks } />
-                <TasksList tasks={ tasks }/>
+                <TasksList tasks={ tasks } onUpdateTask={this.updateTask.bind(this)}/>
             </View>
         )
     }

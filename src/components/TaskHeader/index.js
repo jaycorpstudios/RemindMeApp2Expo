@@ -15,8 +15,8 @@ class TaskHeader extends Component {
 
     render(){
         return(
-            <View>
-                <ImageBackground source={ require('./../../images/tasks-bg.jpg') } style={styles.header} blurRadius={15}>
+            <View style={styles.container}>
+                <ImageBackground source={ require('./../../images/tasks-bg.jpg') } style={styles.background} blurRadius={15}>
                     <Image source={ require('./../../images/user-avatar.png') } style={styles.avatar}></Image>
                     <View>
                         <Text style={styles.toDo}>{this.getUncompletedTasks()} Pendientes</Text>

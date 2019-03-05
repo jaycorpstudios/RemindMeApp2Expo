@@ -1,11 +1,18 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    header: {
+    container: {
         alignItems: 'center',
-        height: 250,
+        height: 299,
+        flexGrow: 0,
         justifyContent: 'center',
+        width: '100%'
+    },
+    background: {
+        justifyContent: 'center',
+        alignItems: 'center',
         width: '100%',
+        height: '100%'
     },
     avatar: {
         borderRadius: 50,
@@ -14,7 +21,8 @@ const styles = StyleSheet.create({
     },
     toDo: {
         color: 'white',
-        fontSize: 28,
+        fontSize: 36,
+        textAlign: 'center'
     },
     date: {
         color: '#C0C0C0',
