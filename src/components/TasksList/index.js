@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView } from 'react-native';
 import TaskItem from './../TaskItem';
 
 export default class TasksList extends Component {
@@ -21,9 +21,9 @@ export default class TasksList extends Component {
 
   render(){
     return(
-      <View>
+      <ScrollView>
         { this.renderTasks() }
-      </View>
+      </ScrollView>
     )
   }
 
